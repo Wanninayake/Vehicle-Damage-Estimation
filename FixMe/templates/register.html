@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<head>
+    <title>FixMe-register</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'signin.css' %}">
+</head>
+
+<body style="background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url({% static 'pic1.jpg' %})!important;">
+
+<header>
+
+    <img src="{% static 'logo.png' %}" alt="Logo" style="position:absolute; left:0px; top:0px; margin: 00px 15px 15px 20px; max-width: 200px; height: 100px;" >
+
+    <ul class="main-nav">
+        <li ><a href="/home/"> HOME </a></li>
+        <li><a href="/about/"> ABOUT </a></li>
+        <li><a href="/contact/"> CONTACT </a></li>
+        <li class="active"><a href="/signin/"> LOGIN </a></li>
+    </ul>
+
+    <div class="hero" style=" width: 1200px; margin-left: 160px; margin-top: 90px;">
+        <h1>FixMe</h1>
+        <h3>Quick Price check</h3>
+    </div>
+
+    <div class="login-page">
+        <div class="form" div class="form" style=" margin-top: 130px;" >
+            <form class="register-form">
+                <input type="text" placeholder="name"/>
+                <input type="password" placeholder="password"/>
+                <input type="text" placeholder="email address"/>
+                <button>create</button>
+                <p class="message">Already registered? <a href="#">Sign In</a></p>
+            </form>
+
+            <form class="login-form">
+                <input type="text" placeholder="email address"/>
+                <input type="text" placeholder="name"/>
+                <input type="password" placeholder="password"/>
+                <input type="password"  placeholder="Confirm Password" >
+                <button class="btn btn-one" a href="/signin/">Sign Up</button>
+                <p class="message">Already have an Account? <a href="/signin/">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+</header>
+
+</body>
+</html>

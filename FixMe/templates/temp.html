@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+{%  extends 'base.html' %}
+
+    {% block content %}
+
+        {{ request.user }}
+
+        <p>
+        {{ my_text }}, {{ my_number }}, {{ my_list }}
+        </p>
+
+{#        <ul>#}
+{#            {%  for my_sub_items in my_list%}#}
+{#                <li> {{ my_sub_items }}</li>#}
+{#            {% endfor %}#}
+{#        </ul>#}
+
+
+    {% endblock  %}
+
+</body>
+</html>

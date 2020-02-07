@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<head>
+<title>FixMe-Home</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+
+<body style="background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url({% static 'pic1.jpg' %})!important;">
+
+    <header>
+        
+<img src="{% static 'logo.png' %}" alt="Logo" style="position:absolute; left:0px; top:0px; margin: 00px 15px 15px 20px; max-width: 200px; height: 100px;" >
+
+    <ul class="main-nav" style=" width: 100%!important; text-align: right!important; vertical-align:bottom!important; line-height:110px!important; height:120px!important; background:transparent !important;" >
+        <li class="active"><a href="/home/"> HOME </a></li>
+        <li><a href="/about/"> ABOUT </a></li>
+        <li><a href="/contact/"> CONTACT </a></li>
+        <li><a href="/signin/"> LOGIN </a></li>
+    </ul>    
+
+        
+    <div class="hero" style=" width: 1200px; margin-left: 180px; margin-top: 10px;">
+
+        <h1>FixMe</h1>
+    <h3>Quick Price check</h3>
+
+    <div class="button">
+        <a href="/signin/" class="btn btn-one"> Sign In</a>
+        <a href="/signup/" class="btn btn-two"> Sign Up</a>
+    </div>
+            
+    </div>
+    
+    </header>
+
+
+        
+</body>    
+</html>

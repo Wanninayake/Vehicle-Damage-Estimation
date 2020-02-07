@@ -1,0 +1,99 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<head>
+    <title>FixMe-estimation</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'signin.css' %}">
+
+    <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+    <meta charset=utf-8 />
+{#    <meta http-equiv="refresh" content="5">#}
+
+    <style>
+        article, aside, figure, footer, header, hgroup,
+        menu, nav, section { display: block; }
+    </style>
+
+</head>
+
+<body style="background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url({% static 'pic1.jpg' %})!important;">
+
+<header>
+
+    <img src="{% static 'logo.png' %}" alt="Logo" style="position:absolute; left:0px; top:0px; margin: 00px 15px 15px 20px; max-width: 200px; height: 100px;" >
+
+    <ul class="main-nav" style=" width: 100%!important; text-align: right!important; vertical-align:bottom!important; line-height:110px!important; height:120px!important; background:transparent !important;" >
+        <li ><a href="/imageupload/"> HOME </a></li>
+        <li><a href="/about/"> ABOUT </a></li>
+        <li><a href="/contact/"> CONTACT </a></li>
+        <li class="active"><a href="/signin/"> LOGOUT </a></li>
+    </ul>
+
+
+    <div class="hero" style=" width: 1200px; margin-left: 160px; margin-top: -60px; margin-bottom: -30px !important;">
+        <h1>FixMe</h1>
+        <h3>Quick Price check</h3>
+    </div>
+
+    <div class="login-page">
+        <div class="form" style=" margin-top: -10px; !important;">
+            <form class="login-form">
+                <p class="message2" style=" !important;">Damage Estimation </p>
+                {% comment %}<input type='file' onchange="readURL(this);" />
+                <img id="blah" src="IMG_4678" alt="no image" />{% endcomment %}
+                <p class="message2" > {{ my_list }} </p>
+{#                <p class="message2"> Moderate </p>#}
+{#                <p class="message2"> Severe </p>#}
+                <input type="text" id="brand" placeholder="Brand"/>
+                <input type="text" id= "name" placeholder="Vehicle Name"/>
+                <input type="text" id= "year" placeholder="Year"/>
+                <input type="text" id= "compt" placeholder="Componant"/>
+                <button class="btn-three" onclick="myFunction();"> Vehicle Componant Price </button>
+            </form>
+        </div>
+    </div>
+
+</header>
+<footer id="footer" class="wrapper" style="margin-top: 30px !important;">
+
+					<div class="copyright" style="color: #bbb;font-size: 0.9rem;margin: 0 0 2rem 0;padding: 0;text-align: center;">
+						 copyright &copy; <a href="http://127.0.0.1:8000/home/">FixMe </a>. All Rights Reserved
+					</div>
+
+</footer>
+</body>
+
+<script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+
+<script>
+            function myFunction() {
+                var s1 = document.getElementById("brand").value;
+                var s2 = " " + document.getElementById("name").value;
+                var s3 = " " + document.getElementById("year").value;
+                var s4 = " " + document.getElementById("compt").value;
+                var q = s1 + s2 + s3 + s4 + " price";
+                window.open('http://google.com/search?q='+q);
+            }
+</script>
+
+
+</html>
